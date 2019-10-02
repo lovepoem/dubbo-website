@@ -166,6 +166,11 @@
       "meta": {}
     },
     {
+      "filename": "config-center.md",
+      "link": "/en-us/docs/dev/impls/config-center.html",
+      "meta": {}
+    },
+    {
       "filename": "container.md",
       "link": "/en-us/docs/dev/impls/container.html",
       "meta": {}
@@ -446,7 +451,11 @@
     {
       "filename": "annotation.md",
       "link": "/en-us/docs/user/configuration/annotation.html",
-      "meta": {}
+      "meta": {
+        "title": "Annotation Configuration",
+        "keywords": "dubbo,annotation configuration",
+        "description": "Annotation Configuration"
+      }
     },
     {
       "filename": "api.md",
@@ -461,6 +470,11 @@
     {
       "filename": "properties.md",
       "link": "/en-us/docs/user/configuration/properties.html",
+      "meta": {}
+    },
+    {
+      "filename": "translate configuration-load-process.md",
+      "link": "/en-us/docs/user/configuration/translate configuration-load-process.html",
       "meta": {}
     },
     {
@@ -479,8 +493,18 @@
       "meta": {}
     },
     {
+      "filename": "async-call-deprecated.md",
+      "link": "/en-us/docs/user/demos/async-call-deprecated.html",
+      "meta": {}
+    },
+    {
       "filename": "async-call.md",
       "link": "/en-us/docs/user/demos/async-call.html",
+      "meta": {}
+    },
+    {
+      "filename": "async-execute-on-provider.md",
+      "link": "/en-us/docs/user/demos/async-execute-on-provider.html",
       "meta": {}
     },
     {
@@ -889,6 +913,11 @@
       "meta": {}
     },
     {
+      "filename": "dubbo-config-center.md",
+      "link": "/en-us/docs/user/references/xml/dubbo-config-center.html",
+      "meta": {}
+    },
+    {
       "filename": "dubbo-consumer.md",
       "link": "/en-us/docs/user/references/xml/dubbo-consumer.html",
       "meta": {}
@@ -926,12 +955,20 @@
     {
       "filename": "dubbo-reference.md",
       "link": "/en-us/docs/user/references/xml/dubbo-reference.html",
-      "meta": {}
+      "meta": {
+        "title": "dubbo:reference",
+        "keywords": "dubbo,reference",
+        "description": "dubbo:reference"
+      }
     },
     {
       "filename": "dubbo-registry.md",
       "link": "/en-us/docs/user/references/xml/dubbo-registry.html",
-      "meta": {}
+      "meta": {
+        "title": "dubbo:registry",
+        "keywords": "dubbo,registry",
+        "description": "dubbo:registry"
+      }
     },
     {
       "filename": "dubbo-service.md",
@@ -1086,11 +1123,6 @@
       "meta": {}
     },
     {
-      "filename": "design.md",
-      "link": "/zh-cn/docs/dev/configcenter/design.html",
-      "meta": {}
-    },
-    {
       "filename": "contract.md",
       "link": "/zh-cn/docs/dev/contract.html",
       "meta": {}
@@ -1123,6 +1155,11 @@
     {
       "filename": "compiler.md",
       "link": "/zh-cn/docs/dev/impls/compiler.html",
+      "meta": {}
+    },
+    {
+      "filename": "config-center.md",
+      "link": "/zh-cn/docs/dev/impls/config-center.html",
       "meta": {}
     },
     {
@@ -1495,7 +1532,11 @@
     {
       "filename": "annotation.md",
       "link": "/zh-cn/docs/user/configuration/annotation.html",
-      "meta": {}
+      "meta": {
+        "title": "注解配置",
+        "keywords": "dubbo,注解配置",
+        "description": "注解配置"
+      }
     },
     {
       "filename": "api.md",
@@ -1513,6 +1554,11 @@
       "meta": {}
     },
     {
+      "filename": "environment-variables.md",
+      "link": "/zh-cn/docs/user/configuration/environment-variables.html",
+      "meta": {}
+    },
+    {
       "filename": "index.md",
       "link": "/zh-cn/docs/user/configuration/index.html",
       "meta": {}
@@ -1520,6 +1566,11 @@
     {
       "filename": "properties-deprecated.md",
       "link": "/zh-cn/docs/user/configuration/properties-deprecated.html",
+      "meta": {}
+    },
+    {
+      "filename": "properties.md",
+      "link": "/zh-cn/docs/user/configuration/properties.html",
       "meta": {}
     },
     {
@@ -2060,7 +2111,11 @@
     {
       "filename": "dubbo-registry.md",
       "link": "/zh-cn/docs/user/references/xml/dubbo-registry.html",
-      "meta": {}
+      "meta": {
+        "title": "dubbo:registry",
+        "keywords": "dubboregistry",
+        "description": "dubbo:registry"
+      }
     },
     {
       "filename": "dubbo-service.md",
@@ -2099,7 +2154,11 @@
     {
       "filename": "version-270.md",
       "link": "/zh-cn/docs/user/versions/version-270.html",
-      "meta": {}
+      "meta": {
+        "title": "升级与可能的兼容性问题总结",
+        "keywords": "Dubbo,升级与可能的兼容性问题总结",
+        "description": "升级与可能的兼容性问题总结"
+      }
     }
   ]
 }

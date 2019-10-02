@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="/build/blogDetail.css" />
 </head>
 <body>
-	<div id="root"><div class="blog-detail-page" data-reactroot=""><header class="header-container header-container-normal"><div class="header-body"><a href="/zh-cn/index.html"><img class="logo" src="/img/dubbo_colorful.png"/></a><div class="search search-normal"><span class="icon-search"></span></div><span class="language-switch language-switch-normal">En</span><div class="header-menu"><img class="header-menu-toggle" src="/img/menu_gray.png"/><ul><li class="menu-item menu-item-normal"><a href="/zh-cn/index.html">首页</a></li><li class="menu-item menu-item-normal"><a href="/zh-cn/docs/user/quick-start.html">文档</a></li><li class="menu-item menu-item-normal"><a href="/zh-cn/docs/developers/developers_dev.html">开发者</a></li><li class="menu-item menu-item-normal menu-item-normal-active"><a href="/zh-cn/blog/index.html">博客</a></li><li class="menu-item menu-item-normal"><a href="/zh-cn/community/index.html">社区</a></li><li class="menu-item menu-item-normal"><a href="/zh-cn/blog/download.html">下载</a></li></ul></div></div></header><section class="blog-content markdown-body"><h1>Dubbo客户端异步接口的实现背景和实践</h1>
+	<div id="root"><div class="blog-detail-page" data-reactroot=""><header class="header-container header-container-normal"><div class="header-body"><a href="/zh-cn/index.html"><img class="logo" src="/img/dubbo_colorful.png"/></a><div class="search search-normal"><span class="icon-search"></span></div><span class="language-switch language-switch-normal">En</span><div class="header-menu"><img class="header-menu-toggle" src="/img/menu_gray.png"/><ul><li class="menu-item menu-item-normal"><a href="/zh-cn/index.html">首页</a></li><li class="menu-item menu-item-normal"><a href="/zh-cn/docs/user/quick-start.html">文档</a></li><li class="menu-item menu-item-normal"><a href="/zh-cn/docs/developers/developers_dev.html">开发者</a></li><li class="menu-item menu-item-normal menu-item-normal-active"><a href="/zh-cn/blog/index.html">博客</a></li><li class="menu-item menu-item-normal"><a href="/zh-cn/community/index.html">社区</a></li><li class="menu-item menu-item-normal"><a href="/zh-cn/ecology/index.html">生态系统</a></li><li class="menu-item menu-item-normal"><a href="/zh-cn/blog/download.html">下载</a></li></ul></div></div></header><section class="blog-content markdown-body"><h1>Dubbo客户端异步接口的实现背景和实践</h1>
 <h2>铺垫</h2>
 <p><img src="../../img/blog/dubboasyn_client/1.png" alt="image | left"></p>
 <p>先简单介绍下一次完整的Dubbo调用所经历的线程阶段。几个信息这里罗列下</p>
@@ -29,7 +29,7 @@
 </ol>
 <h2>客户端异步</h2>
 <h3>实现背景</h3>
-<p>在Java语言（其他语言不清楚）下一次本地接口的调用可以透明地通过代理机制转为远程RPC的调用，大多数业务方也比较喜欢这种与本地接口类似的编程方式做远程服务集成，所以虽然RPC内部天然是异步的，但使用Dubbo的用户使用最广泛的还是同步，而异步反而成为小众的使用场景。同步的优点是编程模型更加符合业务方的“传统”习惯，代价是在图中的1代表的请求发出事件后需要阻塞当前的Biz~线程，一直等到4代表的响应处理后才能唤醒。在这个短则微妙级别，长则秒级的1,2,3,4处理过程中都要阻塞Biz~线程，就会消耗线程资源，增加系统资源的开销。</p>
+<p>在Java语言（其他语言不清楚）下一次本地接口的调用可以透明地通过代理机制转为远程RPC的调用，大多数业务方也比较喜欢这种与本地接口类似的编程方式做远程服务集成，所以虽然RPC内部天然是异步的，但使用Dubbo的用户使用最广泛的还是同步，而异步反而成为小众的使用场景。同步的优点是编程模型更加符合业务方的“传统”习惯，代价是在图中的1代表的请求发出事件后需要阻塞当前的Biz~线程，一直等到4代表的响应处理后才能唤醒。在这个短则微秒级别，长则秒级的1,2,3,4处理过程中都要阻塞Biz~线程，就会消耗线程资源，增加系统资源的开销。</p>
 <p>所以，客户端异步的出发点是节省线程资源开销，代价是需要了解下异步的使用方式:)。在同步方式下API接口的返回类型是代表着某个业务类，而当异步情况下，响应返回与请求发出是完全独立的两个事件，需要API接口的返回类型变为上述中说的CompletionStage才是最贴合的，这是Dubbo在异步上支持的必然异步。回到最近的Dubbo发布版，是不改变接口的情况下，需要在服务创建时注册一个回调接口来处理响应返回事件。</p>
 <p>下面以示例来说。</p>
 <h3>示例</h3>
