@@ -37,6 +37,11 @@
       }
     },
     {
+      "filename": "dubbo-basic-usage-dubbo-consumer-configuration.md",
+      "link": "/en-us/blog/dubbo-basic-usage-dubbo-consumer-configuration.html",
+      "meta": {}
+    },
+    {
       "filename": "dubbo-basic-usage-dubbo-provider-configuration.md",
       "link": "/en-us/blog/dubbo-basic-usage-dubbo-provider-configuration.html",
       "meta": {
@@ -152,6 +157,11 @@
         "keywords": "Dubbo, Protocol, RPC",
         "description": "This article introduces the design of the Dubbo protocol."
       }
+    },
+    {
+      "filename": "dubbo-registry-nacos-integration.md",
+      "link": "/en-us/blog/dubbo-registry-nacos-integration.html",
+      "meta": {}
     },
     {
       "filename": "dubbo-zk.md",
@@ -295,6 +305,11 @@
     }
   ],
   "zh-cn": [
+    {
+      "filename": "Dubbo-supporting-gRPC-HTTP2-and-protobuf.md",
+      "link": "/zh-cn/blog/Dubbo-supporting-gRPC-HTTP2-and-protobuf.html",
+      "meta": {}
+    },
     {
       "filename": "apachecon-na-2018.md",
       "link": "/zh-cn/blog/apachecon-na-2018.html",
@@ -565,7 +580,7 @@
       "meta": {
         "title": "Dubbo在Service Mesh下的思考和方案",
         "keywords": "Dubbo, Service Mesh, Cloud Native",
-        "description": "Dubbo是实现框架，融入servcemesh理念就是我们今天分享的。"
+        "description": "Dubbo是实现框架，融入service mesh理念就是我们今天分享的。"
       }
     },
     {

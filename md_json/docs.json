@@ -463,6 +463,11 @@
       "meta": {}
     },
     {
+      "filename": "configuration-load-process.md",
+      "link": "/en-us/docs/user/configuration/configuration-load-process.html",
+      "meta": {}
+    },
+    {
       "filename": "index.md",
       "link": "/en-us/docs/user/configuration/index.html",
       "meta": {}
@@ -470,11 +475,6 @@
     {
       "filename": "properties.md",
       "link": "/en-us/docs/user/configuration/properties.html",
-      "meta": {}
-    },
-    {
-      "filename": "translate configuration-load-process.md",
-      "link": "/en-us/docs/user/configuration/translate configuration-load-process.html",
       "meta": {}
     },
     {
@@ -525,6 +525,11 @@
     {
       "filename": "config-connections.md",
       "link": "/en-us/docs/user/demos/config-connections.html",
+      "meta": {}
+    },
+    {
+      "filename": "config-rule-deprecated.md",
+      "link": "/en-us/docs/user/demos/config-rule-deprecated.html",
       "meta": {}
     },
     {
@@ -1589,6 +1594,11 @@
       "meta": {}
     },
     {
+      "filename": "GooglePb-generic-reference.md",
+      "link": "/zh-cn/docs/user/demos/GooglePb-generic-reference.html",
+      "meta": {}
+    },
+    {
       "filename": "accesslog.md",
       "link": "/zh-cn/docs/user/demos/accesslog.html",
       "meta": {}
@@ -1918,7 +1928,11 @@
     {
       "filename": "requirements.md",
       "link": "/zh-cn/docs/user/preface/requirements.html",
-      "meta": {}
+      "meta": {
+        "title": "需求",
+        "keywords": "服务注册中心，依赖关系，机器支撑",
+        "description": "本文介绍了dubbo要解决的需求"
+      }
     },
     {
       "filename": "usage.md",
